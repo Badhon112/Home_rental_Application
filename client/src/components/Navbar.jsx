@@ -64,19 +64,19 @@ export default function Navbar() {
         )}
         {dropdownmenu && user && (
           <div className="absolute bg-white flex flex-col right-16 top-20 p-3 border-4">
-            <Link to={"/login"} className="hover:text-red-500">
+            <Link to={"/"} className="hover:text-red-500">
               Trip List
             </Link>
-            <Link to={"/login"} className="hover:text-red-500">
+            <Link to={"/"} className="hover:text-red-500">
               Wish List
             </Link>
-            <Link to={"/login"} className="hover:text-red-500">
+            <Link to={"/"} className="hover:text-red-500">
               Property List
             </Link>
-            <Link to={"/login"} className="hover:text-red-500">
+            <Link to={"/"} className="hover:text-red-500">
               Reservation List
             </Link>
-            <Link to={"/login"} className="hover:text-red-500">
+            <Link to={"/create-listing"} className="hover:text-red-500">
               Become A Host
             </Link>
             <Link

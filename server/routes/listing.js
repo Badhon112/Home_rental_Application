@@ -1,7 +1,6 @@
 import express from "express";
 import multer from "multer";
 import Listing from "../models/Listing.js";
-import User from "../models/User.js";
 const router = express.Router();
 
 //Configuration Multer for file Uploadeds

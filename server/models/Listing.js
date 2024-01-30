@@ -70,6 +70,7 @@ const ListingSchema = new mongoose.Schema(
     highligthDesc: {
       type: String,
       require: true,
+      default:"Lorem100"
     },
     price: {
       type: Number,

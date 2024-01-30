@@ -38,7 +38,9 @@ export default function Listings() {
           return (
             <div
               key={index}
-              className={`flex flex-col items-center text-gray-900 cursor-pointer`}
+              className={`flex flex-col items-center text-gray-900 cursor-pointer ${
+                category.label === selectedCategory ? 'text-red-500': ""
+              }`}
               onClick={() => selectedCategory(category.label)}
             >
               <div style={{ fontSize: "30px" }}>{category.icon}</div>
@@ -68,7 +70,7 @@ export default function Listings() {
                   price,
                 }) => (
                   <ListingCard
-                  key={_id}
+                    key={_id}
                     listingId={_id}
                     creator={creator}
                     listingPhotoPaths={listingPhotoPaths}
