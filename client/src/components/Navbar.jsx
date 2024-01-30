@@ -9,18 +9,17 @@ export default function Navbar() {
   const [dropdownmenu, setDropdownmenu] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-  const menuHandle=()=>{
-    if(dropdownmenu===false){
-        setDropdownmenu(true)
+  const menuHandle = () => {
+    if (dropdownmenu === false) {
+      setDropdownmenu(true);
+    } else {
+      setDropdownmenu(false);
     }
-    else{
-        setDropdownmenu(false)
-    }
-  }
+  };
   return (
     <div className="navbar flex justify-around p-3 items-center">
       <Link to="/" className="text-3xl font-bold">
-        House
+       Home Rents
       </Link>
       <div className="navbar_search flex items-center ">
         <input
@@ -42,14 +41,12 @@ export default function Navbar() {
         )}
         <button className="navbar_right_account flex items-center rounded-3xl border border-gray-300 p-3 space-x-3">
           <IoIosMenu size={22} onClick={menuHandle} />
-          {! user ? (
+          {!user ? (
             <FaRegUser size={22} />
           ) : (
             <img
-              src={`http://localhost:3001/${user.profileImagePath.replace(
-                "public",
-                ""
-              )}`}
+              src={`http://localhost:3001/${user.profileImagePath.replace("public","")}`}
+              // src=""
               alt="profile image"
               className="rounded-full w-10 text-xs h-10"
             />

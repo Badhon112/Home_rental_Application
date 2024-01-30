@@ -102,11 +102,11 @@ router.get("/", async (req, res) => {
 router.get("/:listingId", async (req, res) => {
   try {
     const { listingId } = req.params;
-    console.log(listingId);
+    // console.log(listingId);
     const listing = await Listing.findById(listingId);
     res.status(202).json(listing);
   } catch (error) {
-    res.status(404).json({ message: "Listing can't found",error });
+    res.status(404).json({ message: "Listing can't found", error });
   }
 });
 
